@@ -1,0 +1,77 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            智能投顾
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <risk-return-graph [data]="riskReturnData"></risk-return-graph>
+
+    <div class="risk-level-desc">{{ riskLevelDesc }}</div>
+
+    <div class="risk-adjust">
+        <div class="custom-slider-container">
+            <div class="custom-range-slider">
+                <div class="range-tick ra-small-font risk-level-1" [class.selected]="riskLevel==1" style="left: 0%;">1</div>
+                <div class="range-tick ra-small-font risk-level-2" [class.selected]="riskLevel==2" style="left: 11.1111%;">2</div>
+                <div class="range-tick ra-small-font risk-level-3" [class.selected]="riskLevel==3" style="left: 22.2222%;">3</div>
+                <div class="range-tick ra-small-font risk-level-4" [class.selected]="riskLevel==4" style="left: 33.3333%;">4</div>
+                <div class="range-tick ra-small-font risk-level-5" [class.selected]="riskLevel==5" style="left: 44.4444%;">5</div>
+                <div class="range-tick ra-small-font risk-level-6" [class.selected]="riskLevel==6" style="left: 55.5556%;">6</div>
+                <div class="range-tick ra-small-font risk-level-7" [class.selected]="riskLevel==7" style="left: 66.6667%;">7</div>
+                <div class="range-tick ra-small-font risk-level-8" [class.selected]="riskLevel==8" style="left: 77.7778%;">8</div>
+                <div class="range-tick ra-small-font risk-level-9" [class.selected]="riskLevel==9" style="left: 88.8889%;">9</div>
+                <div class="range-tick ra-small-font risk-level-10" [class.selected]="riskLevel==10" style="left: 100%;">10</div>
+            </div>
+        </div>
+        <ion-range min="1" max="10" step="1" snaps="true" [(ngModel)]="riskLevel" (tap)="onTap($event)" (ionChange)="onRiskChange()"></ion-range>
+    </div>
+
+    <div padding>
+        <ion-segment [(ngModel)]="investCategory">
+            <ion-segment-button value="investSolultion">
+                投资方案
+            </ion-segment-button>
+            <ion-segment-button value="historyRate">
+                历史收益
+            </ion-segment-button>
+            <ion-segment-button value="radar">
+                组合分析
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+    <div [ngSwitch]="investCategory" class="segment-content-container">
+        <div *ngSwitchCase="'investSolultion'">
+            <asset-bar-chart [data]="barChartData"></asset-bar-chart>
+            <ion-list>
+                <button *ngFor="let targetCode of targetCodes" ion-item (click)="goPortfolioDetail(targetCode)">
+                    <span class="sign target-sign {{targetCode}}">&nbsp;</span>
+                    <span class="name">{{ targetCode | transAsset }}</span>
+                    <span class="percent">{{ proposal?.target[targetCode].percentage | raPercent }}</span>
+                </button>
+            </ion-list>
+        </div>
+        <div *ngSwitchCase="'historyRate'">
+            <portfolio-history-graph [daily-return]="historyReturn"></portfolio-history-graph>
+        </div>
+        <div *ngSwitchCase="'radar'">
+            <div class="radar-link" padding-horizontal (click)="toRadarInfo()">资产组合规则</div>
+            <radar-graph [portfolio]="radar_graph"></radar-graph>
+        </div>
+    </div>
+
+    <div class="ra-padding-horizontal ra-tiny-font ra-gray text-center">
+        本组合的过往业绩并不预示其未来表现，也不构成本组合业绩表现的保证
+    </div>
+    <div class="ra-padding-horizontal ra-tiny-font ra-gray text-center disclaimer-2">
+        市场有风险，投资需谨慎
+    </div>
+
+</ion-content>
+
+<ion-footer>
+    <button ion-button full (click)="purchase()">立即购买</button>
+</ion-footer>

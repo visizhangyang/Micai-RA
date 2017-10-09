@@ -1,0 +1,9 @@
+<div class="item-container" *ngFor="let item of data">
+    <div class="ra-tiny-font name">{{ item.code | transAsset }}</div>
+    <div class="bar {{ item.code }}" attr.data-percentage="{{item.percentage}}">
+        <svg width="0px" height="3px">
+            <rect stroke="none" width="0" height="3" rx="1.5"></rect>
+        </svg>
+    </div>
+    <div class="ra-tiny-font percent">{{ item.percentage | raPercent }}</div>
+</div>

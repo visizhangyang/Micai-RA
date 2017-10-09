@@ -1,0 +1,68 @@
+asset-allocation-page {
+
+    .text-description {
+        margin-top: 20px;
+
+        .summary {
+            background-color: $background-color;
+
+            .title {
+                display: inline-block;
+                width: 60%;
+            }
+
+            .date {
+                display: inline-block;
+                width: 40%;
+                @include list-right-item-fix();
+            }
+        }
+
+        .detail {
+            background-color: $background-color;
+            span {
+                white-space: normal;
+            }
+        }
+    }
+
+    donut {
+        display: inline-block;
+        width: 100%;
+        height: 224px;
+        text-align: center;
+        margin: -20px 0 10px;
+    }
+
+    .rebalance-list {
+
+        .rebalance-header {
+            .item-inner {
+                background-image: none;
+            }
+        }
+
+        .sign {
+            display: inline-block;
+            position: relative;
+            width: 10%;
+        }
+
+        .name {
+            display: inline-block;
+            width: 30%;
+        }
+        .suggest {
+            display: inline-block;
+            width: 25%;
+            text-align: center;
+        }
+
+        .adjust {
+            display: inline-block;
+            width: 25%;
+            text-align: center;
+        }
+
+    }
+}

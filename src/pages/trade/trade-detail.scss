@@ -1,0 +1,21 @@
+trade-detail-page {
+    .detail-title {
+        margin-top: 20px;
+
+        .name {
+            display: inline-block;
+            width: 40%;
+        }
+
+        .value {
+            display: inline-block;
+            width: 60%;
+            @include list-right-item-fix();
+        }
+    }
+
+    .trade-datetime-item {
+        background-color: $background-color;
+    }
+
+}

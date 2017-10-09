@@ -1,0 +1,23 @@
+profile-page {
+    .profile-list {
+        margin-top: 20px;
+
+        .profile-name {
+            display: inline-block;
+            width: 33%;
+            color: #9b9b9b;
+        }
+
+        .profile-value {
+            display: inline-block;
+        }
+    }
+
+    button.logout {
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: #1a1c20;
+        color: #f24a30;
+        font-size: 16px;
+    }
+}

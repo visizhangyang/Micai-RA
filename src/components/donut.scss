@@ -1,0 +1,29 @@
+donut {
+    svg {
+        overflow: visible;
+    }
+
+    path {
+        &.FIXED_INCOME {
+            fill: $fixed-income-fill;
+        }
+
+        &.STOCK {
+            fill: $stock-fill;
+        }
+
+        &.ALTERNATIVE {
+            fill: $alternative-fill;
+        }
+
+        &.CASH {
+            fill: $cash-fill;
+        }
+    }
+
+    text {
+        fill: white;
+        font: 1rem PingFangSC-Regular;
+        text-anchor: middle;
+    }
+}

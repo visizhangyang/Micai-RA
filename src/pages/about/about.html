@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            关于
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list class="about-list">
+        <button ion-item [navPush]="aboutDetailPage">
+            关注微博&微信
+        </button>
+        <button ion-item (click)="openSupportURL()">
+            访问弥财网站
+        </button>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <div class="micai-info">
+        <i class="img-micai-logo-text"></i>
+    </div>
+    <div class="terms">
+        <a class="terms-link">
+            弥财服务条款 <i class="ion-ios-arrow-round-forward"></i>
+        </a>
+    </div>
+    <p class="copyright">
+        Copyright ©2015 MICAI All Rights Reserved
+    </p>
+</ion-footer>

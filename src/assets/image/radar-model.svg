@@ -1,0 +1,42 @@
+<svg width="303px" height="294px" viewBox="34 151 303 294" version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="52.5450415%" fx="50%" fy="52.5450415%" r="92.014521%" id="radialGradient-1">
+            <stop stop-color="#5AC8FA" stop-opacity="0.598222373" offset="0%"></stop>
+            <stop stop-color="#34AADC" stop-opacity="0.595052083" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(34.000000, 151.500000)">
+        <g transform="translate(44.500000, 29.911765)">
+            <ellipse id="Oval-7" stroke="#4A4A4A" stroke-width="1.8" opacity="0.404211957" cx="108.25" cy="109.760967" rx="43.25" ry="43.8536889"></ellipse>
+            <ellipse id="Oval-8" stroke="#4A4A4A" stroke-width="1.8" opacity="0.304970562" cx="108" cy="109.507478" rx="21.5" ry="21.8000997"></ellipse>
+            <ellipse id="Oval" stroke="#4A4A4A" stroke-width="1.8" opacity="0.696105072" cx="108" cy="109.507478" rx="108" ry="109.507478"></ellipse>
+            <ellipse id="Oval-3" stroke="#4A4A4A" stroke-width="1.35" opacity="0.600543478" cx="108" cy="109.507478" rx="86.5" ry="87.7073779"></ellipse>
+            <ellipse id="Oval-6" stroke="#4A4A4A" stroke-width="1.35" opacity="0.5" cx="107.75" cy="109.253988" rx="64.75" ry="65.6537886"></ellipse>
+            <path d="M107,107.645766 L107,2.84217094e-14 L109,2.84217094e-14 L109,107.645766 L210.884171,74.5415925 L211.502205,76.4437055 L109.382216,109.624501 L109.399,109.636696 L109.236068,109.860952 L172.585914,197.054536 L170.96788,198.230106 L108,111.562254 L45.0321195,198.230106 L43.4140855,197.054536 L106.763932,109.860952 L106.601,109.636696 L106.617784,109.624501 L4.49779519,76.4437055 L5.11582918,74.5415925 L107,107.645766 Z" id="Rectangle-20" fill="#4A4A4A" opacity="0.297780797"></path>
+            <path d="M115.033928,45.9724569 C130.354914,47.9526464 166.917793,74.1970717 171.417793,91.9413389 C176.040715,110.170309 149.179149,159.746411 139.679149,165.323181 C130.671847,170.610722 68.2981554,164.187832 58.8979705,154.901032 C49.4404791,145.557616 44.7728449,90.168474 49.8465483,78.2460538 C54.9202518,66.3236337 92.5339277,45.9724569 115.033928,45.9724569 Z" id="Path-10" fill-opacity="0.899999976" fill="url(#radialGradient-1)" style="mix-blend-mode: screen;" transform="translate(109.857593, 106.601916) scale(1, -1) rotate(28.000000) translate(-109.857593, -106.601916) "></path>
+        </g>
+        <text font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#F0F0F0">
+            <tspan x="266.5" y="101.214357">稳定性</tspan>
+        </text>
+        <text font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#F0F0F0">
+            <tspan x="50.5" y="253.815055">分散性</tspan>
+        </text>
+        <text font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#F0F0F0">
+            <tspan x="222" y="253.815055">抗跌能力</tspan>
+        </text>
+        <text font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#F0F0F0">
+            <tspan x="0" y="101.214357">流动性</tspan>
+        </text>
+        <text font-family="PingFangSC-Light, PingFang SC" font-size="12" font-weight="300" fill="#F0F0F0">
+            <tspan x="128.5" y="13">收益能力</tspan>
+        </text>
+        <rect fill="#34AADC" x="116.5" y="282.894317" width="11" height="4.0558325" rx="1"></rect>
+        <text opacity="0.5" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" fill="#FFFFFF">
+            <tspan x="132" y="289.331505">投资组合</tspan>
+        </text>
+    </g>
+</svg>

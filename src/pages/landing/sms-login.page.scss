@@ -1,0 +1,17 @@
+sms-login-page {
+    .ion-list {
+        margin-top: 15px;
+    }
+    .error {
+        margin-top: -32px;
+        color: #f24a30;
+        font-size: 12px;
+        height: 64px;
+        overflow: hidden;
+    }
+    .nav-button-box {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+}

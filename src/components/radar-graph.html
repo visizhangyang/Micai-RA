@@ -1,0 +1,7 @@
+<div class="container">
+</div>
+<div class="legend">
+    <div class="item" *ngFor="let item of this.legend">
+        <span [ngStyle]="{'background-color':item.color}"></span>{{item.label}}
+    </div>
+</div>

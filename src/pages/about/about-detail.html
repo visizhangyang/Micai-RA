@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            关注微博&微信
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list class="weibo-list">
+        <button ion-item no-lines (click)="openMicaiWeiboURL()">
+            <i class="weibo-icon img-icon-weibo"></i>
+            关注弥财微博
+        </button>
+    </ion-list>
+
+    <div class="wechat">
+        <i class="wechat-icon img-icon-wechat"></i> 关注弥财公众号，微信搜索：
+        <span data-tap-disabled=true class="wechat-username">micaiapp</span>
+    </div>
+</ion-content>

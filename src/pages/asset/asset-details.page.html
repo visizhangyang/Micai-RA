@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            {{portfolio_name}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="total-market-value" *ngIf="portfolio_current_value!=null">
+        <div class="rmb">￥</div>
+        <div class="integer number">
+            {{ portfolio_current_value | integer | formatMoney:0 }}.<span class="fraction number">{{ portfolio_current_value | fractionPart:2}}</span>
+        </div>
+    </div>
+    <div class="pending-info">
+        {{pendingInfo}}
+    </div>
+    <ion-grid class="asset-stats">
+        <ion-row>
+            <ion-col class="text" width-50>昨日收益</ion-col>
+            <ion-col class="text" width-50>累计收益</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="number" width-50>{{portfolio_return_yesterday | formatMoneyWithSymbol}}</ion-col>
+            <ion-col class="number" width-50>{{portfolio_return | formatMoneyWithSymbol}}</ion-col>
+        </ion-row>
+    </ion-grid>
+    <div class="title-bar" margin>
+        <div class="title">
+            历史收益走势
+        </div>
+    </div>
+    <portfolio-history-graph [daily-return]="daily_return" [current-value]="portfolio_current_value"></portfolio-history-graph>
+    <div class="title-bar" margin>
+        <div class="title">
+            组合分析
+        </div>
+        <div class="link" (click)="toRadarInfo()">资产组合规则</div>
+    </div>
+    <div>
+        <radar-graph [portfolio]="radar_graph"></radar-graph>
+    </div>
+    <div class="profile-box" padding>
+        <button ion-button [color]="need_rebalance?'positive':'light'" outline [disabled]="!need_rebalance" (click)="rebalance()">优化</button>
+        <div class="text">
+            优化功能基于在既定收益下追求最低风险的原则，对您的投资组合持仓比例进行调整，使您的资产在收益和风险之间获得最优的平衡。
+        </div>
+    </div>
+    <div class="my-assets-title-bar" padding>
+        <div class="title">
+            我的资产
+        </div>
+        <div class="buttons">
+            <div class="button current" (click)="changeShowMarketValue(true)" [ngClass]="{current:show_market_value}">市值</div>
+            <div class="point"></div>
+            <div class="button" (click)="changeShowMarketValue(false)" [ngClass]="{current:!show_market_value}">比重</div>
+        </div>
+    </div>
+    <ion-list class="portfolio_list">
+        <div class="assets" *ngFor="let asset of portfolio_target">
+            <div ion-item class="header" (click)="toggleAssetVisibility(asset)">
+                <i class="item-left point {{asset.type}}" name="md-square" item-left></i> {{asset.type | transAsset}}
+                <ion-icon [name]="asset.klass" item-right></ion-icon>
+            </div>
+            <div class="product-list" *ngIf="asset.klass == 'arrow-up'">
+                <ion-item *ngFor="let product of asset.products">
+                    <i class="item-left" item-left></i>
+                    <span>{{product.product_name}}</span>
+                    <span item-right *ngIf="show_market_value">￥{{product.amount | formatMoney:0}}</span>
+                    <span item-right *ngIf="!show_market_value">{{product.percentage | formatPercent}}</span>
+                </ion-item>
+            </div>
+        </div>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <button class="add" ion-button full [disabled]="!isInPosition" (click)="append()">追加</button>
+    <!--<button class="profile" ion-button full [disabled]="!isInPosition" (click)="rebalance()">优化</button>-->
+    <div class="divider"></div>
+    <button class="redemption" ion-button full [disabled]="!isInPosition" (click)="redeem()">赎回</button>
+</ion-footer>

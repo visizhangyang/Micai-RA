@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            赎回
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list class="trade-list" no-lines>
+        <button class="account" ion-item detail-none disabled>
+            <ion-icon class='img-icon-avatar' item-left></ion-icon>
+            <span class="ra-small-font ra-text-white">弥财虚拟账号</span>
+        </button>
+    </ion-list>
+
+    <div class="amount">
+        <div class="name ra-small-font ra-text-white">赎回金额</div>
+        <div class="value">
+            <span class="sign">¥</span>
+            <input type="number" [(ngModel)]="redeemAmount" />
+        </div>
+        <div class="value-info">
+            <span class="ra-small-font ra-gray">可用余额 ¥ {{availableBalance | formatMoney}}</span>
+            <span class="ra-small-font ra-blue" (click)="redeemAmountAll()">全部提现</span>
+        </div>
+    </div>
+
+    <div class="error-info ra-small-font ra-red" [hidden]="!isReedemAllRequired()">
+        弥财要求最低资产余额￥{{minBalanceAmount | formatMoney}}，您可以修改金额或全部提现
+    </div>
+
+    <button ion-button class="confirm" full (click)="redeem()" [hidden]="isReedemAllRequired()" [disabled]="!(redeemAmount != null && redeemAmount > 0 && redeemAmount <= availableBalance)">确认</button>
+    <button ion-button class="confirm redeem-all" full (click)="redeemAll()" [hidden]="!isReedemAllRequired()">全部提现</button>
+
+    <div class="legal-article ra-small-font ra-blue">
+        <a href="assets/docs/InvestorRightsAndInterests.pdf" target="_blank">投资人权益须知</a>
+        <a href="assets/docs/FundIntelliPortfolioServiceRules.pdf" target="_blank">基金智能投资组合服务规则</a>
+    </div>
+
+</ion-content>

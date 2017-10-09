@@ -1,0 +1,31 @@
+open-account-page {
+
+    .scroll-content {
+        background-color: white;
+        color: black;
+        font-family: 'STHeitiSC-Light', 'Heiti SC Light', 'Heiti SC';
+        font-weight: 200;
+        font-style: normal;
+        font-size: 36px;
+
+        .title {
+            margin: 50px 0 30px;
+            text-align: center
+        }
+
+        .text {
+            padding: 0 15px;
+        }
+    }
+
+    button.go-back {
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: $button-color-primary;
+        color: white;
+        font-size: 25px;
+        @include ra-font();
+        font-weight: bold;
+    }
+
+}

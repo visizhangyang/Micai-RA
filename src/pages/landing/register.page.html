@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            注册新用户
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list class="ion-list">
+        <ion-item>
+            <ion-label><span>手</span><span>机</span><span>号</span></ion-label>
+            <ion-input type="number" [(ngModel)]="phoneNumber" (ngModelChange)="validate()" placeholder="11位手机号码"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label><span>密</span><span>码</span></ion-label>
+            <ion-input type="password" [(ngModel)]="password" (ngModelChange)="validate()" placeholder="至少8位，包含数字和字母"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label><span>验</span><span>证</span><span>码</span></ion-label>
+            <ion-input type="number" [(ngModel)]="code" (ngModelChange)="validate()"></ion-input>
+            <button ion-button color="dark" item-right (click)="fetchSMSCode()" [disabled]="fetchingCode">{{fetchingCode?timeCount+'秒':'获取验证码'}}</button>
+        </ion-item>
+    </ion-list>
+    <div class="error" padding>
+        {{error}}
+    </div>
+    <button ion-button full [onClick]="register.bind(this)" [disabled]="!canSubmit">注册</button>
+    <div class="nav-button-box">
+        <button ion-button clear (click)="toPasswordLoginPage()">已有帐号登录</button>
+    </div>
+</ion-content>

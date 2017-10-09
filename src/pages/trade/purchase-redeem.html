@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="segment-container">
+        <ion-segment [ngModel]="displayType">
+            <ion-segment-button value="purchase" [disabled]="displayType!=='purchase'">
+                购买
+            </ion-segment-button>
+            <ion-segment-button value="redeem" [disabled]="displayType!=='redeem'">
+                赎回
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+    <div [ngSwitch]="displayType">
+        <div *ngSwitchCase="'purchase'">
+            <div class="amount">
+                <div class="value">
+                    <input type="number" [(ngModel)]="purchaseAmount" placeholder="￥ 000,000" />
+                </div>
+            </div>
+            <div class="split-line"></div>
+            <div class="purchase-info ra-small-font ra-gray text-center">
+                <div>预估申购费率0.16%，智能组合管理费为0</div>
+                <div *ngIf="type=='purchase'">起投金额￥{{ minPurchaseAmount | formatMoney }} ，您有￥{{ accountBalance | formatMoney }} 可以投入</div>
+                <div *ngIf="type=='append'">最小追加金额为￥{{ minAppendAmount | formatMoney }}，您有￥{{ accountBalance | formatMoney }} 可以投入</div>
+            </div>
+            <button ion-button class="confirm" full [disabled]="!canPurchase()" (click)="confirm()">确认</button>
+        </div>
+        <div *ngSwitchCase="'redeem'">
+            <div class="amount">
+                <div class="value">
+                    <input type="number" [(ngModel)]="redeemAmount" placeholder="￥ 000,000" />
+                </div>
+                <button (click)="reedemAll()">全部</button>
+            </div>
+            <div class="split-line"></div>
+            <div class="redeem-info ra-small-font ra-gray text-center">
+                <div>您有￥{{ assetBalance | formatMoney }} 可以赎回</div>
+                <div *ngIf="isReedemAllRequired()">弥财要求最低账户余额￥{{ minBalanceAmount | formatMoney }} 您可以修改金额或全部取出</div>
+            </div>
+            <button ion-button class="confirm" full (click)="confirm()" [disabled]="redeemAmount == null || redeemAmount <= 0 || isReedemAllRequired()">确认</button>
+        </div>
+    </div>
+
+</ion-content>

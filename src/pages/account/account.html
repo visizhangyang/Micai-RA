@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            账户
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="account-header">
+        <div class="img-icon-avatar account-avatar" (click)="goProfile()"></div>
+        <div class="account-phone">{{phone}}</div>
+    </div>
+    <ion-list class="account-list">
+        <button ion-item>
+            <img class="account-icon" src="assets/image/account/bank-card.png" />
+            我的银行卡
+        </button>
+        <button ion-item>
+            <img class="account-icon" src="assets/image/account/password.png" />
+            修改交易密码
+        </button>
+        <button ion-item>
+            <img class="account-icon" src="assets/image/account/message.png" />
+            消息中心
+        </button>
+        <button ion-item>
+            <img class="account-icon" src="assets/image/account/feedback.png" />
+            支持和反馈
+        </button>
+        <button ion-item>
+            <img class="account-icon" src="assets/image/account/settings.png?v2" />
+            设置
+        </button>
+        <button ion-item (click)="aboutClick()">
+            <img class="account-icon" src="assets/image/account/about.png" />
+            关于
+        </button>
+    </ion-list>
+</ion-content>

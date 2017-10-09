@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            交易明细
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list class="detail-title">
+        <ion-item>
+            <span class="name ra-small-font ra-gray">{{adjustLabel}}</span>
+            <span class="value ra-large-font-regular ra-text-white">¥ {{amount | formatMoney}}</span>
+        </ion-item>
+        <ion-item class="trade-datetime-item">
+            <span class="name ra-small-font ra-gray">操作时间</span>
+            <span class="value ra-small-font ra-gray">{{adjustDateTime | formatDate: true}}</span>
+        </ion-item>
+    </ion-list>
+
+    <ion-list class="detail-list">
+        <trade-detail-records [data]="detailData"></trade-detail-records>
+    </ion-list>
+</ion-content>

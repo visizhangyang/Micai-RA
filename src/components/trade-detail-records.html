@@ -1,0 +1,14 @@
+<ng-container *ngFor="let target of data">
+    <div>
+        <ion-item>
+            <span class="sign target-sign {{target.code}}">&nbsp;</span>
+            <span class="code ra-large-font ra-gray">{{target.code | transAsset}}</span>
+        </ion-item>
+        <ion-item class="product-item" *ngFor="let product of target.products">
+            <span class="placeholder">&nbsp;</span>
+            <span class="name ra-small-font text-ellipsis">{{product.product_name}}</span>
+            <span class="percent ra-small-font ra-text-white">{{product.statusLabel}}</span>
+            <span class="amount ra-large-font-regular ra-text-white">¥ {{product.amount | formatMoney}}</span>
+        </ion-item>
+    </div>
+</ng-container>

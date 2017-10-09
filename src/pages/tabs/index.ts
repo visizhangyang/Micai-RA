@@ -1,0 +1,2 @@
+export { TabsPage } from './tabs'
+

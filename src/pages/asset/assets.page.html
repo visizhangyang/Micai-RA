@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            资产
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="total-market">
+        <div class="big-balance-bar" *ngIf="assetsSummary.totalValue != null" (click)="viewTradeRecords()">
+            <div class="rmb">￥</div>
+            <div class="integer number">
+                {{ assetsSummary.totalValue | integer | formatMoney:0 }}.<span class="fraction number">{{ assetsSummary.totalValue | fractionPart:2}}</span>
+            </div>
+            <ion-icon name="ios-arrow-forward-outline"></ion-icon>
+        </div>
+        <div class="total-market-value">
+            总持仓市值
+        </div>
+        <ion-grid class="asset-stats">
+            <ion-row>
+                <ion-col width-50 class="text">昨日收益</ion-col>
+                <ion-col width-50 class="text">累计收益</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col width-50 class="number">{{ assetsSummary.returnYesterday | formatMoneyWithSymbol }}</ion-col>
+                <ion-col width-50 class="number">{{ assetsSummary.returnTotal | formatMoneyWithSymbol }}</ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <div class="asset-list" *ngIf="hasAssets">
+        <div class="asset-item" (tap)="toDtailsPage(asset.id)" *ngFor="let asset of portfolios">
+            <div class="asset-header" padding-horizontal>
+                <span>{{asset.name}}</span>
+                <span class="created-date">{{ asset.created | formatDate }}</span>
+            </div>
+            <ion-grid padding-horizontal>
+                <ion-row class="values">
+                    <ion-col class="number">{{asset.marketValue | formatMoney}}</ion-col>
+                    <ion-col class="number">{{asset.return | formatMoneyWithSymbol}}</ion-col>
+                    <ion-col class="number" width-25 [fluctuation]="asset.yesterday_return">{{asset.yesterday_return | formatMoneyWithSymbol}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>当前市值</ion-col>
+                    <ion-col>累计收益</ion-col>
+                    <ion-col width-25>昨日收益</ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+
+    <div class="no-assets" *ngIf="hasAssets===false">
+        当前没有持有资产
+        <br/>
+        <button ion-button (click)="invest()">立即投资</button>
+    </div>
+
+</ion-content>

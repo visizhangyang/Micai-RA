@@ -1,0 +1,74 @@
+@mixin trade-common {
+    .trade-list {
+        margin-top: 30px;
+
+        button.account {
+            opacity: 1;
+
+            .label-ios {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            .img-icon-avatar {
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+            
+        }
+    }
+
+    .amount {
+        margin-top: 50px;
+
+        .name {
+            background-color: #27282f;
+            padding-left: $item-ios-padding-left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .value {
+            background-color: $background-secondary-color;
+            padding-left: $item-ios-padding-left;
+            padding-right: $item-ios-padding-right;
+            font-family: PingFangSC-Light;
+            font-size: 4.5rem;
+            display:flex;
+
+            .sign {
+                width: 40px;
+            }
+
+            input {
+                width: 60%;
+                flex-grow:1;
+                background-color: $background-secondary-color;
+                border: none;
+            }
+        }
+    }
+
+    .error-info {
+        margin-top: 10px;
+        padding-left: $item-ios-padding-left;
+    }
+
+    button.confirm {
+        margin-top: 50px;
+    }
+
+    .legal-article {
+        margin-top: 20px;
+        padding-left: $item-ios-padding-left;
+        padding-right: $item-ios-padding-right;
+
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+}

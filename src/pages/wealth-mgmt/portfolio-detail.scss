@@ -1,0 +1,41 @@
+portfolio-detail-page {
+    .detail-list {
+        margin-top: 20px;
+        .category {
+            position: relative;
+            padding-left: $item-ios-padding-left;
+            padding-right: $item-ios-padding-right;
+            background-color: $background-third-color;
+            height: 45px;
+            line-height: 45px;
+            border-bottom: 1px solid $background-color;
+            .sign {
+                display: inline-block;
+                position: relative;
+                margin-right: 11px;
+            }
+            .icon {
+                float: right;
+            }
+        }
+        ion-item {
+            background: transparent;
+        }
+        ion-label.label {
+            display: flex;
+            align-items: center;
+            .placeholder {
+                width: 20px;
+                flex: none;
+            }
+            .name {
+                flex: 5;
+                white-space: normal;
+            }
+            .percent {
+                flex: 2;
+                text-align: center;
+            }
+        }
+    }
+}

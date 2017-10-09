@@ -1,0 +1,37 @@
+trade-detail-records {
+    
+    .sign {
+        display: inline-block;
+        position: relative;
+        width: 20px;
+    }
+    
+    .product-item {
+        background-color: $background-color;
+    }
+
+    ion-label.label {
+        display: flex;
+        align-items: center;
+
+        .placeholder {
+            width: 20px;
+            flex: none;
+        }
+
+        .name {
+            flex: 5;
+        }
+
+        .percent {
+            flex: 2;
+            text-align: right;
+        }
+
+        .amount {
+            flex: 3;
+            text-align: right;
+        }
+    }
+
+}

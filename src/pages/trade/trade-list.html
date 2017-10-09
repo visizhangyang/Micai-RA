@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            交易记录
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="processing-title ra-small-font ra-gray">
+        进行中
+    </div>
+    <ion-list>
+        <trade-list-records [data]="processingList"></trade-list-records>
+    </ion-list>
+
+    <div class="completed-title ra-small-font ra-gray">
+        已完成
+    </div>
+    <ion-list>
+        <trade-list-records [data]="completedList"></trade-list-records>
+    </ion-list>
+
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            购买
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list class="trade-list" no-lines>
+        <button class="account" ion-item detail-none disabled>
+            <ion-icon class="img-icon-avatar" item-left></ion-icon>
+            <span class="ra-small-font ra-text-white">弥财虚拟账号</span>
+            <br />
+            <span class="ra-small-font ra-text-white">可用余额： ¥ {{balance | formatMoney}}</span>
+        </button>
+    </ion-list>
+
+    <div class="amount">
+        <div class="name ra-small-font ra-text-white">购买金额</div>
+        <div class="value">
+            <span class="sign">¥</span>
+            <input type="number" [(ngModel)]="purchaseAmount" />
+        </div>
+    </div>
+
+    <div class="introdution ra-small-font ra-gray">
+        <span *ngIf="purchaseType !== 'append'">起购金额¥</span>
+        <span *ngIf="purchaseType === 'append'">最小追加金额为￥</span> {{ minAmount | formatMoney }}，预估申购费率0.16%，智能组合管理费为0
+    </div>
+
+    <div [hidden]="purchaseAmount == null || purchaseAmount <= balance" class="error-info ra-small-font ra-red">
+        您的帐号余额不足
+    </div>
+
+    <button ion-button class="confirm" full [disabled]="purchaseAmount == null || purchaseAmount < this.minAmount || purchaseAmount > balance"
+        (click)="confirm()">确认</button>
+
+    <div class="legal-article ra-small-font ra-blue">
+        <a href="assets/docs/InvestorRightsAndInterests.pdf" target="_blank">投资人权益须知</a>
+        <a href="assets/docs/FundIntelliPortfolioServiceRules.pdf" target="_blank">基金智能投资组合服务规则</a>
+    </div>
+
+</ion-content>

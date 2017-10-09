@@ -1,0 +1,114 @@
+invest-advisor-page {
+    risk-return-graph {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 12px 0;
+    }
+    radar-graph {
+        margin-bottom: 20px;
+    }
+    portfolio-history-graph {
+        margin-bottom: 30px;
+    }
+    .radar-link {
+        float: right;
+        color: #1580F3;
+        font-size: 10px;
+    }
+    .risk-level-desc {
+        padding: 20px 30px 0 30px;
+        @include ra-font();
+        color: $m-gray;
+        font-size: 1.2rem;
+        line-height: 2.4rem;
+    }
+    .risk-adjust {
+        background-color: $background-color;
+        margin-top: 35px;
+        padding: 15px 25px 0 25px;
+        .custom-slider-container {
+            padding: 0 $item-ios-padding-right 0 $item-ios-padding-left;
+            .custom-range-slider {
+                position: relative;
+                .range-tick {
+                    position: absolute;
+                    top: -10px;
+                    margin-left: -3px;
+                    color: $m-gray;
+                    &.selected {
+                        font-size: 1.7rem;
+                        margin-left: -4px;
+                        top: -13px;
+                        &.risk-level-1 {
+                            color: #0291ff;
+                        }
+                        &.risk-level-2 {
+                            color: #1ba2ff;
+                        }
+                        &.risk-level-3 {
+                            color: #3fbbff;
+                        }
+                        &.risk-level-4 {
+                            color: #62d2fc;
+                        }
+                        &.risk-level-5 {
+                            color: #8ac7bc;
+                        }
+                        &.risk-level-6 {
+                            color: #afbc82;
+                        }
+                        &.risk-level-7 {
+                            color: #d7b141;
+                        }
+                        &.risk-level-8 {
+                            color: #ffa400;
+                        }
+                        &.risk-level-9 {
+                            color: #ff7121;
+                        }
+                        &.risk-level-10 {
+                            color: #fa5534;
+                        }
+                    }
+                }
+            }
+        }
+        .range-slider {
+            .range-tick {
+                display: none;
+            }
+            .range-bar {
+                height: 5px;
+                width: 100%;
+                border-radius: 5px;
+                background-image: linear-gradient(90deg, #0291FF 0%, #47DD6B 34%, #FFA500 67%, #FA5534 100%);
+                &.range-bar-active {
+                    background: linear-gradient(90deg, transparent 11.1111%, black 11.1111%, black calc(11.1111% + 1px), transparent calc(11.1111% + 1px), transparent 22.2222%, black 22.2222%, black calc(22.2222% + 1px), transparent calc(22.2222% + 1px), transparent 33.3333%, black 33.3333%, black calc(33.3333% + 1px), transparent calc(33.3333% + 1px), transparent 44.4444%, black 44.4444%, black calc(44.4444% + 1px), transparent calc(44.4444% + 1px), transparent 55.5556%, black 55.5556%, black calc(55.5556% + 1px), transparent calc(55.5556% + 1px), transparent 66.6667%, black 66.6667%, black calc(66.6667% + 1px), transparent calc(66.6667% + 1px), // use 1.5px to show the split line, 1px does not work
+                    transparent 77.7778%, black 77.7778%, black calc(77.7778% + 1.5px), transparent calc(77.7778% + 1.5px), transparent 88.8889%, black 88.8889%, black calc(88.8889% + 1px), transparent calc(88.8889% + 1px));
+                }
+            }
+        }
+    }
+    .segment-content-container {
+        margin-top: 18px;
+    }
+    ion-label.label {
+        display: flex;
+        .sign {
+            width: 20px;
+            flex: none;
+        }
+        .name {
+            flex: 3;
+        }
+        .percent {
+            flex: 2;
+            text-align: right;
+        }
+    }
+    .disclaimer-2 {
+        margin-top: 5px;
+        margin-bottom: 34px;
+    }
+}

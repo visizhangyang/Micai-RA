@@ -1,0 +1,12 @@
+<div class="period-list">
+    <div class="item" *ngFor="let item of this.period_list" [ngClass]="{'current':item == this.current_period}" (click)="this.changePeriod(item)">
+        {{item.label}}
+    </div>
+</div>
+<div class="container">
+</div>
+<div class="legend">
+    <div class="item" *ngFor="let item of this.legend">
+        <span [ngStyle]="{'background-color':item.color}"></span>{{item.label}}
+    </div>
+</div>

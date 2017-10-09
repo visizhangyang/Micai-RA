@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            密码登录
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="dismiss()">
+                <ion-icon name="md-close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list class="ion-list">
+        <ion-item>
+            <ion-label><span>手</span><span>机</span><span>号</span></ion-label>
+            <ion-input type="number" [(ngModel)]="phoneNumber" (ngModelChange)="validate()"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label><span>密</span><span>码</span></ion-label>
+            <ion-input type="password" [(ngModel)]="password" (ngModelChange)="validate()"></ion-input>
+        </ion-item>
+    </ion-list>
+    <div class="error" padding>
+        {{error}}
+    </div>
+    <button ion-button full [onClick]="login.bind(this)" [disabled]="!canSubmit">登录</button>
+    <div class="nav-button-box">
+        <button ion-button clear (click)="toSMSLoginPage()">手机短信登录</button>
+        <button ion-button clear (click)="toRegisterPage()">注册新账户</button>
+    </div>
+</ion-content>

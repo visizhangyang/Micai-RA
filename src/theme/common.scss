@@ -1,0 +1,165 @@
+
+@mixin ra-font {
+    font-family: PingFangSC-Light;
+}
+
+@mixin ra-font-regular {
+    font-family: PingFangSC-Regular;
+}
+
+@mixin list-right-item-fix {
+    text-align: right;
+    padding-right: 8px;
+}
+
+.item-ios {
+    background-color: $background-secondary-color;
+}
+
+.list-ios {
+
+    .item-block {
+        border: 1px solid $background-color;
+
+        .item-inner {
+            border-bottom-width: 0;
+        }
+    }
+
+    >.item-block {
+        &:first-child {
+            border-top-width: 0;
+        }
+
+        &:last-child {
+            border-bottom-width: 0;
+        }
+    }
+
+}
+
+.item-ios.item-block .item-inner {
+    border-bottom-width: 0;
+}
+
+.segment-ios .segment-button {
+    color: $m-gray;
+}
+
+.toolbar-title-ios {
+    font-family: PingFangSC-Light;
+}
+
+.toolbar-ios ion-title {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.custom-spinner-container {
+    text-align: center;
+    color: white;
+}
+
+.custom-spinner-box {
+    display:inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../assets/image/loading.png');
+}
+
+.button-ios span {
+    font-family: PingFangSC-Regular;
+}
+
+.ra-tiny-font {
+    font-family: PingFangSC-Regular;
+    font-size: 1rem;
+}
+
+.ra-small-font {
+    font-family: PingFangSC-Regular;
+    font-size: 1.2rem;
+}
+
+.ra-large-font {
+    font-family: PingFangSC-Light;
+    font-size: 1.5rem;
+}
+
+.ra-large-font-regular {
+    font-family: PingFangSC-Regular;
+    font-size: 1.5rem;
+}
+
+.ra-gray {
+    color: $m-gray;
+}
+
+.ra-blue {
+    color: #1580F3;
+}
+
+.ra-text-white {
+    color: $text-white-color;
+}
+
+.ra-red {
+    color: #D1381B;
+}
+
+.ra-padding-horizontal {
+    padding-left: $item-ios-padding-left;
+    padding-right: $item-ios-padding-right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-ellipsis {
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.target-sign {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        content: ' ';
+    }
+
+    &.FIXED_INCOME {
+        &:before {
+            background-color: $fixed-income-fill;
+        }
+    }
+
+    &.STOCK {
+        &:before {
+            background-color: $stock-fill;
+        }
+    }
+
+    &.ALTERNATIVE {
+        &:before {
+            background-color: $alternative-fill;
+        }
+    }
+
+    &.CASH {
+        &:before {
+            background-color: $cash-fill;
+        }
+    }
+
+}

@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            手机短信登录
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list class="ion-list">
+        <ion-item>
+            <ion-label>手机号</ion-label>
+            <ion-input type="number" [(ngModel)]="phoneNumber" (ngModelChange)="validate()"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>验证码</ion-label>
+            <ion-input type="number" [(ngModel)]="code" (ngModelChange)="validate()"></ion-input>
+            <button ion-button color="dark" item-right (click)="fetchSMSCode()" [disabled]="fetchingCode">{{fetchingCode?timeCount+'秒':'获取验证码'}}</button>
+        </ion-item>
+    </ion-list>
+    <div class="error" padding>
+        {{error}}
+    </div>
+    <button ion-button full [onClick]="login.bind(this)" [disabled]="!canSubmit">登录</button>
+    <div class="nav-button-box">
+        <button ion-button clear (click)="toPasswordLoginPage()">密码登录</button>
+        <button ion-button clear (click)="toRegisterPage()">注册新账户</button>
+    </div>
+</ion-content>

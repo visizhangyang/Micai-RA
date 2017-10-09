@@ -1,0 +1,34 @@
+trade-list-records {
+
+    .label {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .text {
+        display: inline-block;
+        width: 50%;
+        @include list-right-item-fix();
+    }
+
+    .first-item {
+        &.item-block {
+            border-bottom: 1px solid rgba(75, 75, 75, 0.4);
+        }
+    }
+
+    .second-item {
+        &.item-block {
+            border: none;
+        }
+    }
+
+    .gap {
+        margin-top: 20px;
+    }
+
+    .no-records {
+        padding-left: $item-ios-padding-left;
+    }
+
+}

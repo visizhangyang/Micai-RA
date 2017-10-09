@@ -1,0 +1,31 @@
+compliance-confirm-page {
+    .total-list {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .name {
+            display: inline-block;
+            width: 33%;
+        }
+        .value {
+            display: inline-block;
+            width: 67%;
+            @include list-right-item-fix();
+        }
+    }
+    .trade-intro {
+        margin-top: -30px;
+        padding-left: $item-ios-padding-left;
+        display: none;
+        span.ion-ios-arrow-forward {
+            position: relative;
+            font-size: 1.8rem;
+            top: 0.25rem;
+        }
+    }
+    .detail-intro {
+        padding-left: $item-ios-padding-left;
+    }
+    .detail-list {
+        margin-top: 20px;
+    }
+}

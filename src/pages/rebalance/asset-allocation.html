@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            资产配置方案
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list class="text-description">
+        <button ion-item class="summary" detail-none>
+            <span class="ra-small-font ra-gray title">优化资产配置比例</span>
+            <span class="ra-small-font ra-gray date">{{allocationDate | formatDate}}</span>
+        </button>
+        <button ion-item class="detail" detail-none>
+            <span class="ra-small-font ra-gray" *ngIf="needAdjust">
+                本期重点：由于三地市场相对强弱发生变化，
+                弥财智投管理系统今日提示优化资产配置，适当增加固定收益资产，目前市场股票类资产风险较大，
+                短期可适当增加固定收益资产，优化资产配置组合。
+            </span>
+            <span class="ra-small-font ra-gray" *ngIf="!needAdjust">
+                经系统计算，您的资产当前不需要做出优化调整。
+            </span>
+        </button>
+    </ion-list>
+    <div *ngIf="needAdjust">
+        <donut [data]="donutData"></donut>
+        <ion-list class="rebalance-list">
+            <button class="rebalance-header" ion-item>
+                <span class="sign">&nbsp;</span>
+                <span class="ra-large-font ra-text-white name">资产</span>
+                <span class="ra-large-font ra-text-white suggest">占比 </span>
+                <span class="ra-large-font ra-text-white adjust">对比持仓</span>
+            </button>
+            <button ion-item *ngFor="let rebalance of rebalanceList" (click)="viewDetail(rebalance.code)">
+                <span class="sign target-sign {{rebalance.code}}">&nbsp;</span>
+                <span class="ra-large-font ra-text-white name">{{ rebalance.code | transAsset}}</span>
+                <span class="ra-large-font ra-text-white suggest">{{ rebalance.suggest | raPercent}}</span>
+                <span class="ra-large-font ra-text-white adjust">{{ rebalance.adjust | raPercent}}</span>
+            </button>
+        </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer>
+    <button ion-button full [disabled]="!needAdjust" (click)="doRebalance()">我要调仓</button>
+</ion-footer>

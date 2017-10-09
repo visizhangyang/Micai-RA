@@ -1,0 +1,27 @@
+risk-return-graph {
+
+    text.rate {
+        .name {
+            @include ra-font();
+            font-size: 1rem;
+            fill: $text-color;
+        }
+
+        .value {
+            @include ra-font();
+            font-size: 1.2rem;
+            fill: #1580F3;
+        }
+
+        .risk-level-text {
+            @include ra-font();
+            font-size: 2.7rem;
+        }
+    }
+
+    text.risk-level {
+        font-size: 8.2rem;
+        text-anchor: middle;
+    }
+
+}

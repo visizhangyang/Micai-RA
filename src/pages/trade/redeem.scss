@@ -1,0 +1,17 @@
+redeem-page {
+    
+    @include trade-common();
+
+    .value-info {
+        background-color: $background-secondary-color;
+        padding-left: $item-ios-padding-left;
+        padding-right: $item-ios-padding-right;
+        padding-bottom: 5px;
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .redeem-all {
+        background-color: #FFA602;
+    }
+}

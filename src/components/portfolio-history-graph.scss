@@ -1,0 +1,191 @@
+portfolio-history-graph {
+    display: block;
+    .d3-line-chart {
+        .offset-0 {
+            stop-color: #5393e2;
+            stop-opacity: 0.2;
+        }
+        .offset-100 {
+            stop-color: transparent;
+            stop-opacity: 0.2;
+        }
+        .benchmark-offset-0 {
+            stop-color: #2387F3;
+            stop-opacity: 0.2;
+        }
+        .benchmark-offset-100 {
+            stop-color: #2387F3;
+            stop-opacity: 0.1;
+        }
+        #rebalance-graph-gradient {
+            .offset-0 {
+                stop-color: #1580F3;
+                stop-opacity: 1;
+            }
+            .offset-80 {
+                stop-color: #1580F3;
+                stop-opacity: 0.5;
+            }
+            .offset-100 {
+                stop-color: transparent;
+                stop-opacity: 0;
+            }
+        }
+        #today-graph-gradient {
+            .offset-0 {
+                stop-color: #fff;
+                stop-opacity: 1;
+            }
+            .offset-80 {
+                stop-color: #fff;
+                stop-opacity: 0.5;
+            }
+            .offset-100 {
+                stop-color: transparent;
+                stop-opacity: 0;
+            }
+        }
+        .g-chart {
+            .line {
+                stroke: #28BBE8;
+                stroke-width: 1px;
+                fill: none;
+            }
+            .area {
+                fill: url(#portfolio-history-graph-gradient);
+                stroke-width: 0;
+            }
+            .benchmark-line {
+                stroke: #23354A;
+                stroke-width: 1px;
+                fill: none;
+            }
+            .benchmark-area {
+                fill: url(#benchmark-history-graph-gradient);
+                stroke-width: 0;
+            }
+        }
+        .g-axis {
+            .axis.x {
+                .domain {
+                    stroke: transparent;
+                }
+                .tick {
+                    text {
+                        fill: #45444d;
+                        font-size: 12px;
+                    }
+                    line {
+                        stroke: transparent;
+                        stroke-width: 1px;
+                    }
+                    &:nth-child(2) {
+                        text {
+                            text-anchor: start;
+                        }
+                    }
+                    &:last-child {
+                        text {
+                            text-anchor: end;
+                        }
+                        line {
+                            // stroke: #FFFFFF;
+                        }
+                    }
+                }
+            }
+            .axis.y {
+                .domain {
+                    stroke: none;
+                }
+                .tick {
+                    text {
+                        fill: #45444d;
+                        font-size: 12px;
+                        text-anchor: end;
+                    }
+                    line {
+                        stroke: #1b1c1f;
+                        stroke-width: 1px;
+                    }
+                }
+            }
+        }
+        .g-operations {
+            .operation {
+                fill: #1C1E21;
+                path {
+                    transform: translate(-30px, -17px);
+                }
+                text {
+                    fill: #FFF;
+                    font-size: 10px;
+                    text-anchor: end;
+                }
+                line.rebalance {
+                    stroke-width: 1px;
+                    stroke: url(#rebalance-graph-gradient);
+                }
+                line.today {
+                    stroke-width: 1px;
+                    stroke: url(#today-graph-gradient);
+                }
+            }
+        }
+    }
+    .legend {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #9b9b9b;
+            &:first-child {
+                margin-right: 20px;
+            }
+            span {
+                display: inline-block;
+                width: 15px;
+                height: 5px;
+                margin-right: 5px;
+                border-radius: 2px;
+            }
+        }
+    }
+    .current-value {
+        fill: #fff;
+        text-anchor: end;
+        font-size: 12px;
+    }
+    .period-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 15px;
+        .item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 3px 0;
+            width: 55px;
+            border-radius: 2px;
+            font-size: 12px;
+            color: #9b9b9b;
+            span {
+                display: inline-block;
+                width: 15px;
+                height: 5px;
+                margin-right: 5px;
+                border-radius: 2px;
+            }
+            &.current {
+                background-color: #2b2d35;
+            }
+        }
+    }
+}

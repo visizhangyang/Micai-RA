@@ -1,0 +1,40 @@
+account-page {
+
+    .account-header {
+        color: white;
+        .account-avatar {
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 79px;
+            height: 79px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        
+        .account-phone {
+            margin-top: 5px;
+            text-align: center;
+            font-size: 17px;
+        }
+    }
+
+    .account-list {
+        margin-top: 50px;
+
+        .account-icon {
+            position: absolute;
+            left: $item-ios-padding-left;
+            width: auto;
+            height: auto;
+            max-width: 25px;
+            max-height: 25px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .item-inner { 
+            margin-left: 40px;
+        }
+    }
+}

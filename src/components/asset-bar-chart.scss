@@ -1,0 +1,46 @@
+asset-bar-chart {
+    display: block;
+    margin-bottom: 34px;
+
+    .item-container {
+        display: flex;
+        height: 2.8rem;
+        padding-left: $item-ios-padding-left;
+        padding-right: $item-ios-padding-right;
+        align-items: center;
+
+        .name {
+            width: 5rem;
+            flex: none;
+        }
+
+        .bar {
+            flex: 1;
+            display: flex;
+            align-items: center;
+
+            &.FIXED_INCOME {
+                fill: $fixed-income-fill;
+            }
+
+            &.STOCK {
+                fill: $stock-fill;
+            }
+
+            &.ALTERNATIVE {
+                fill: $alternative-fill;
+            }
+
+            &.CASH {
+                fill: $cash-fill;
+            }
+        }
+
+        .percent {
+            width: 5rem;
+            flex: none;
+            text-align: right;
+        }
+    }
+    
+}

@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            个人信息
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list class="profile-list">
+        <ion-item>
+            <span class="profile-name">电话</span>
+            <span class="profile-value">{{phone}}</span>
+        </ion-item>
+        <!--<ion-item>
+            <span class="profile-name">美元账户</span>
+            <span class="profile-value">虚拟证券账号</span>
+        </ion-item>
+        <ion-item>
+            <span class="profile-name">人民币账户</span>
+            <span class="profile-value">虚拟证券账号</span>
+        </ion-item>-->
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <button ion-button class="logout" full (click)="confirmLogout()">退出账号</button>
+</ion-footer>

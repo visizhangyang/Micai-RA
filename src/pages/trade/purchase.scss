@@ -1,0 +1,11 @@
+purchase-page {
+    
+    @include trade-common();
+
+    .introdution {
+        margin-top: 20px;
+        padding-left: $item-ios-padding-left;
+        padding-right: $item-ios-padding-right;
+    }
+
+}

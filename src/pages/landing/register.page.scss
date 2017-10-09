@@ -1,0 +1,22 @@
+register-page {
+    .ion-list {
+        margin-top: 15px;
+        ion-label {
+            display: flex;
+            justify-content: space-between;
+            width: 65px;
+        }
+    }
+    .error {
+        margin-top: -32px;
+        color: #f24a30;
+        font-size: 12px;
+        height: 64px;
+        overflow: hidden;
+    }
+    .nav-button-box {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+}

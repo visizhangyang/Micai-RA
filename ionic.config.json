@@ -1,0 +1,12 @@
+{
+  "proxies": [
+    {
+      "path": "/api/",
+      "proxyUrl": "http://localhost:8000/api/"
+    }
+  ],
+  "name": "",
+  "app_id": "",
+  "integrations": {},
+  "type": "ionic-angular"
+}

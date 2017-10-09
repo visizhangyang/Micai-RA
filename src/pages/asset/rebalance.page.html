@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            优化详情
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="title-bar" margin>
+        <div class="title">
+            您优化后的投资方案如下
+        </div>
+        <div class="link" (click)="toRebalanceInfo()">优化规则</div>
+    </div>
+    <div>
+        <radar-graph [portfolio]="radar_graph" [rebalance]="rebalance_graph"></radar-graph>
+    </div>
+    <div class="title-bar" margin style="margin-bottom:30px">
+        <div class="title">
+            组合配置比例
+        </div>
+    </div>
+    <asset-bar-chart [data]="barChartData"></asset-bar-chart>
+    <div class="my-assets-title-bar" padding>
+        <div class="title">
+            我的资产
+        </div>
+        <div class="">
+            持仓比重
+        </div>
+    </div>
+    <ion-list class="portfolio_list">
+        <div class="assets" *ngFor="let asset of portfolio_target">
+            <div ion-item class="header" (click)="toggleAssetVisibility(asset)">
+                <i class="item-left point {{asset.type}}" name="md-square" item-left></i> {{asset.type | transAsset}}
+                <ion-icon [name]="asset.klass" item-right></ion-icon>
+            </div>
+            <div class="product-list" *ngIf="asset.klass == 'arrow-up'">
+                <ion-item *ngFor="let product of asset.products">
+                    <i class="item-left" item-left></i>
+                    <span>{{product.product_name}}</span>
+                    <span item-right>{{product.percentage | formatPercentWithSymbol}}</span>
+                </ion-item>
+            </div>
+        </div>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <button ion-button full [disabled]="!needAdjust" [onClick]="doRebalance.bind(this)">确认优化</button>
+</ion-footer>

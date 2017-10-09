@@ -1,0 +1,15 @@
+<ng-container *ngFor="let tradeRecord of data; let i = index">
+    <div class="gap" *ngIf="i > 0"></div>
+    <button ion-item class="first-item" (click)="viewDetail(tradeRecord)">
+        <span class="label ra-small-font ra-gray">{{ tradeRecord.portfolio_name }}</span>
+        <span class="text ra-small-font ra-gray">{{tradeRecord.created | formatDate}}</span>
+    </button>
+    <button ion-item detail-none class="second-item">
+        <span class="label ra-large-font">{{tradeRecord.order_type | transTradeType}}</span>
+        <span class="text ra-large-font-regular ra-text-white">¥ {{tradeRecord.amount | formatMoney}}</span>
+    </button>
+</ng-container>
+
+<span class="no-records ra-large-font ra-text-white" *ngIf="data.length == 0">
+    无
+</span>

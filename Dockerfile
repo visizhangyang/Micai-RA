@@ -1,0 +1,1 @@
+FROM index.micai.asia/build/ra_app_stage_compiler:5

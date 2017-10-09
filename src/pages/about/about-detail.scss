@@ -1,0 +1,38 @@
+about-detail-page {
+    .weibo-list {
+        margin-top: 30px;
+    }
+
+    .weibo-icon {
+        display: inline-block;
+        width: 25px;
+        height: 20px;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+        margin-right: 5px;
+    }
+
+    .wechat {
+        margin: -15px 17px 0 17px;
+        font-size: 17px;
+        white-space: nowrap;
+
+        .wechat-icon {
+            display: inline-block;
+            margin-right: 6px;
+            vertical-align: middle;
+            width: 25px;
+            height: 21px;
+            background: {
+                repeat: no-repeat;
+            }
+        }
+
+        .wechat-username {
+            -webkit-user-select: auto;
+        }
+    }
+
+}

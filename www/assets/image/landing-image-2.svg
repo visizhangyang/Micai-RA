@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="686px" height="494px" viewBox="0 0 686 494" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="path-1" x="0" y="0" width="686" height="318.491879"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="686" height="318.491879" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <ellipse id="path-3" cx="177.208406" cy="449.211137" rx="7.2084063" ry="7.21113689"></ellipse>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14.4168126" height="14.4222738" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <ellipse id="path-5" cx="518.208406" cy="449.211137" rx="7.2084063" ry="7.21113689"></ellipse>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14.4168126" height="14.4222738" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <polyline id="path-7" points="201.563184 240.239274 259.734376 182.300782 299.363279 240.23927 323.281247 212.996091 338.556806 233.248618 367.843747 226.308591 405.85156 258.523434 456.181438 206.843618 456.181438 161.581744 461.338004 132.366772"></polyline>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-8">
+            <feMorphology radius="2" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="2" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="1" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-9" cx="260" cy="187.440558" rx="12" ry="12.0045457"></ellipse>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-10">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.36 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-11" cx="322.226612" cy="214.390951" rx="6.30663531" ry="6.3090243"></ellipse>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-12">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.36 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-13" cx="368.998329" cy="226.756381" rx="8.22398203" ry="8.22709732"></ellipse>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-14">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.36 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-15" cx="342.213474" cy="232.765661" rx="6.49391935" ry="6.49637929"></ellipse>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-16">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.36 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-17" cx="299.635776" cy="237.4897" rx="6.49391935" ry="6.49637929"></ellipse>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-18">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.36 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-19" cx="406.844133" cy="254.399072" rx="12" ry="12.0045457"></ellipse>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-20">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.36 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="swipe-screen-04" transform="translate(-35.000000, -206.000000)">
+            <g id="account-market-value" transform="translate(35.000000, 200.000000)">
+                <g id="line" opacity="0.2" transform="translate(0.000000, 54.890951)" stroke="#FFFFFF">
+                    <use id="Rectangle-237" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                    <path d="M114.862654,2.5684829 L114.862654,316.950983" id="Line" stroke-linecap="square"></path>
+                    <path d="M229.195988,2.5684829 L229.195988,316.950983" id="Line-Copy-19" stroke-linecap="square"></path>
+                    <path d="M343.529321,2.5684829 L343.529321,316.950983" id="Line-Copy-21" stroke-linecap="square"></path>
+                    <path d="M457.862654,2.5684829 L457.862654,316.950983" id="Line-Copy-22" stroke-linecap="square"></path>
+                    <path d="M572.195988,2.5684829 L572.195988,316.950983" id="Line-Copy-25" stroke-linecap="square"></path>
+                </g>
+                <polyline id="Path-374" stroke="#F0F0F0" points="1.53710938 371.622077 13.0832068 346.762322 67.2555857 264.76294 71.4264067 248.226031 90.9238971 252.713078 104.257353 241.158467 122.341155 257.907626 144.846027 249.42506 162.635676 247.30628 176.553047 231.506662 240.840764 244.264025 295.057046 228.710171 301.721579 238.60774 346.740104 224.930625 384.461887 238.60774 414.022032 224.930625 417.358688 168.378942 429.85798 128.546628 472.404744 139.888988 495.73939 124.338858 518.279385 123.385593 548.032704 127.410902 567.240433 137.33826 582.531979 121.542366 597.827916 126.736914 647.156264 100.791528 683.6629 93.350348"></polyline>
+                <ellipse id="Oval-178" fill="#A7FFFC" cx="37.2434326" cy="312.088167" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-4" fill="#A7FFFC" cx="103.716287" cy="242.986079" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-13" fill="#A7FFFC" cx="583.901926" cy="122.800464" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-9" fill="#A7FFFC" cx="414.649737" cy="220.058005" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-11" fill="#49AEFF" cx="497.38704" cy="124.598608" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-2" fill="#5DD9FF" cx="76.8896673" cy="249.591647" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-12" fill="#5DD9FF" cx="553.845884" cy="130.607889" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-8" fill="#5DD9FF" cx="338.795096" cy="239.976798" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-7" fill="#5DD9FF" cx="239.078809" cy="231.563805" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-3" fill="#49AEFF" cx="89.8966725" cy="252.793503" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-14" fill="#49AEFF" cx="599.311734" cy="124.993039" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-10" fill="#49AEFF" cx="297.947461" cy="226.756381" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-5" fill="#49AEFF" cx="123.952715" cy="255.600928" rx="4.8056042" ry="4.80742459"></ellipse>
+                <ellipse id="Oval-178-Copy-6" fill="#49AEFF" cx="179.008757" cy="232.765661" rx="4.8056042" ry="4.80742459"></ellipse>
+                <g id="7月" transform="translate(52.000000, 388.000000)" font-size="18" font-family="PingFangSC-Regular, PingFang SC" fill="#9B9B9B" opacity="0.5" font-weight="normal">
+                    <text id="8">
+                        <tspan x="0.896614711" y="17">7月</tspan>
+                    </text>
+                </g>
+                <g id="7月" transform="translate(162.000000, 388.000000)" font-size="18" font-family="PingFangSC-Regular, PingFang SC" fill="#9B9B9B" opacity="0.5" font-weight="normal">
+                    <text id="8">
+                        <tspan x="9.41961471" y="17">8</tspan>
+                    </text>
+                </g>
+                <g id="7月" transform="translate(276.322242, 387.805104)" font-size="18" font-family="PingFangSC-Regular, PingFang SC" fill="#9B9B9B" opacity="0.5" font-weight="normal">
+                    <text id="8">
+                        <tspan x="0.419614711" y="17">9月</tspan>
+                    </text>
+                </g>
+                <g id="7月" transform="translate(498.581436, 387.805104)" font-size="18" font-family="PingFangSC-Regular, PingFang SC" fill="#9B9B9B" opacity="0.5" font-weight="normal">
+                    <text id="8">
+                        <tspan x="-1.39838529" y="17">11月</tspan>
+                    </text>
+                </g>
+                <g id="7月" transform="translate(386.844133, 387.805104)" font-size="18" font-family="PingFangSC-Regular, PingFang SC" fill="#9B9B9B" opacity="0.5" font-weight="normal">
+                    <text id="8">
+                        <tspan x="-3.18938529" y="17">10月</tspan>
+                    </text>
+                </g>
+                <g id="7月" transform="translate(606.304729, 387.805104)" font-size="18" font-family="PingFangSC-Regular, PingFang SC" fill="#9B9B9B" opacity="0.5" font-weight="normal">
+                    <text id="8">
+                        <tspan x="-3.18938529" y="17">12月</tspan>
+                    </text>
+                </g>
+                <use id="Oval-178-Copy-15" stroke="#51E0EE" mask="url(#mask-4)" stroke-width="4" fill-opacity="0.5" fill="#222222" xlink:href="#path-3"></use>
+                <use id="Oval-178-Copy-17" stroke="#49AEFF" mask="url(#mask-6)" stroke-width="4" fill-opacity="0.5" fill="#222222" xlink:href="#path-5"></use>
+                <path d="M343,360.162413 C423.617131,360.162413 488.970228,294.78456 488.970228,214.136891 C488.970228,133.489222 423.617131,68.1113689 343,68.1113689 C262.382869,68.1113689 197.029772,133.489222 197.029772,214.136891 C197.029772,294.78456 262.382869,360.162413 343,360.162413 Z" id="Oval-174" stroke-opacity="0.964673913" stroke="#393838" stroke-width="4" fill-opacity="0.9" fill="#4A4A4A"></path>
+                <g id="Path-375">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                    <use stroke="#FFFFFF" stroke-width="4" xlink:href="#path-7"></use>
+                </g>
+                <g id="Oval-175">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                    <use fill="#51E0EE" fill-rule="evenodd" xlink:href="#path-9"></use>
+                </g>
+                <g id="Oval-175-Copy">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
+                    <use fill="#A7FFFC" fill-rule="evenodd" xlink:href="#path-11"></use>
+                </g>
+                <g id="Oval-175-Copy-3">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-14)" xlink:href="#path-13"></use>
+                    <use fill="#A7FFFC" fill-rule="evenodd" xlink:href="#path-13"></use>
+                </g>
+                <g id="Oval-175-Copy-4">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-16)" xlink:href="#path-15"></use>
+                    <use fill="#49AEFF" fill-rule="evenodd" xlink:href="#path-15"></use>
+                </g>
+                <g id="Oval-175-Copy-5">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-18)" xlink:href="#path-17"></use>
+                    <use fill="#49AEFF" fill-rule="evenodd" xlink:href="#path-17"></use>
+                </g>
+                <text id="弥财投资管理曲线" font-family="PingFangSC-Regular, PingFang SC" font-size="26" font-weight="normal" letter-spacing="0.832508683" fill="#9B9B9B">
+                    <tspan x="233" y="28">弥财投资管理曲线</tspan>
+                </text>
+                <g id="Oval-175-Copy-2">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-20)" xlink:href="#path-19"></use>
+                    <use fill="#49AEFF" fill-rule="evenodd" xlink:href="#path-19"></use>
+                </g>
+                <path d="M179,443.000001 L258.351563,196.804688" id="Line" stroke="#51E0EE" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M405.995514,254.399072 L515,442.999994" id="Line" stroke="#49AEFF" stroke-width="2" stroke-linecap="square"></path>
+                <text id="减仓，修正投资比例" font-family="PingFangSC-Regular, PingFang SC" font-size="26" font-weight="normal" fill="#9B9B9B">
+                    <tspan x="60" y="495">减仓，修正投资比例</tspan>
+                </text>
+                <text id="再平衡" font-family="PingFangSC-Regular, PingFang SC" font-size="26" font-weight="normal" fill="#9B9B9B">
+                    <tspan x="486" y="495">再平衡</tspan>
+                </text>
+                <text id="低位" font-family="PingFangSC-Regular, PingFang SC" font-size="20" font-weight="normal" fill="#9B9B9B">
+                    <tspan x="385" y="226">低位</tspan>
+                </text>
+                <text id="高位" font-family="PingFangSC-Regular, PingFang SC" font-size="20" font-weight="normal" fill="#9B9B9B">
+                    <tspan x="242" y="161">高位</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

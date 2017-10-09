@@ -1,0 +1,105 @@
+assets-page {
+    .text {
+        font-size: 12px;
+    }
+    .number {
+        font-family: 'PingFang SC', 'STHeitiSC-Light', 'Heiti SC Light', 'Heiti SC';
+        font-size: 18px;
+    }
+    .fluctuation-down {
+        color: #4CD964;
+    }
+    .fluctuation-up {
+        color: #FF3B30;
+    }
+    .total-market {
+        .big-balance-bar {
+            margin: 30px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .integer {
+                font-size: 45px;
+                line-height: 50px;
+                letter-spacing: -2px;
+            }
+            .fraction {
+                font-size: 20px;
+                align-self: flex-end;
+            }
+            .rmb {
+                font-size: 45px;
+                margin-top: -8px;
+            }
+            ion-icon {
+                margin-left: 25px;
+                font-size: 25px;
+                margin-top: -4px;
+            }
+        }
+        .total-market-value {
+            text-align: center;
+            color: $m-gray;
+            margin: 0 auto;
+        }
+        .asset-stats {
+            margin-top: 8px;
+            background-color: #1A1C20;
+            ion-col {
+                text-align: center;
+            }
+            ion-row:last-child {
+                margin-top: -10px;
+            }
+        }
+    }
+    .asset-list {
+        margin: {
+            top: 32px;
+            bottom: 32px;
+        }
+        .asset-item {
+            margin-top: 7px;
+            color: #9B9B9B;
+            font-size: 12px;
+            .asset-header {
+                line-height: 32px;
+                display: flex;
+                justify-content: space-between;
+                background-color: #1A1C20;
+            }
+            ion-grid {
+                border-top: 1px solid rgba(74, 74, 74, 0.4);
+                background-color: #1A1C20;
+                padding: {
+                    top: 18px;
+                    bottom: 18px;
+                }
+                ion-col {
+                    padding: {
+                        left: 0;
+                        right: 0;
+                    }
+                    &:last-child {
+                        text-align: right;
+                    }
+                }
+                .number {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .no-assets {
+        margin-top: 50px;
+        font-size: 16px;
+        color: $m-gray;
+        text-align: center;
+        button {
+            margin-top: 20px;
+            color: white;
+            font-size: 25px;
+            width: 240px;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+purchase-redeem-page {
+    .segment-container {
+        margin: auto;
+        width: 180px;
+    }
+    .amount {
+        margin-top: 4rem;
+        padding-left: $item-ios-padding-left;
+        padding-right: $item-ios-padding-right;
+        font-size: 4rem;
+        display: flex;
+        align-items: center;
+        .value {
+            flex: 1;
+            input {
+                width: 100%;
+                background-color: $background-color;
+                border: none;
+                padding: 0;
+                text-align: center;
+            }
+        }
+        button {
+            color: #1580F3;
+            background: transparent;
+            font-size: 12px;
+            padding: 0;
+        }
+    }
+    .split-line {
+        margin-top: 4rem;
+        border-top: 1px solid #4A4A4A;
+    }
+    .purchase-info,
+    .redeem-info {
+        margin-top: 2rem;
+        line-height: 2.5rem;
+    }
+    button.confirm {
+        margin-top: 5rem;
+    }
+}
